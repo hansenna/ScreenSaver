@@ -1,0 +1,32 @@
+MSYS2 as a build environment.
+https://www.msys2.org/
+https://github.com/msys2/msys2-installer/releases/download/2021-06-04/msys2-x86_64-20210604.exe
+Install to C:\msys64\
+
+From MSYS2 MSYS terminal.
+
+Update with:
+pacman -Syu
+Update base packages with:
+pacman -Su
+
+Install Toolchain:
+pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+
+Install required libraries:
+pacman -S mingw64/mingw-w64-x86_64-SDL2
+pacman -S mingw64/mingw-w64-x86_64-SDL2_image
+
+
+From MSYS2 MinGW 64-bit terminal.
+
+Build:
+g++ ./main.cpp -o main.exe -mwindows -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
+
+Gather dependencies for standalone deployment:
+ldd main.exe | grep '\/mingw.*\.dll' -o | xargs -I{} cp "{}" .
+
+
+
+Assets generated with Blender 2.79b by opening the blend file at ./rawassets/CompanyLogo.blend
+and clicking the "Animation" button from the "Render" section on the right pane.

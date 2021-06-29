@@ -1,0 +1,20 @@
+
+Image format is png for alpha channel, lossless compression and compatibility.
+
+Image dimensions are the same for all frames.
+
+Implemented with SDL as the graphics and user interface library.
+
+Animation frames are stored in a directory relative to the executable called:
+assets/
+Animation frames have a prefix "Test" and suffix ".png" and are numbered starting from 1.
+e.g. "Test1.png", "Test2.png", etc.
+
+Currently limited to a 30hz rendering loop with no vertical sync.
+
+Logo doesn't scale when the window is scaled.
+Logo is presented at a 1:1 pixel mapping ratio to the screen.
+
+Development environment: MSYS2/MinGW under Windows, set up as described in build instructions (build.txt).
+
+Only open-source software used (aside from Windows).
