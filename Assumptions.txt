@@ -15,6 +15,8 @@ Currently limited to a 30hz rendering loop with no vertical sync.
 Logo doesn't scale when the window is scaled.
 Logo is presented at a 1:1 pixel mapping ratio to the screen.
 
+Pressing any key will toggle between rendering modes.  i.e. screen saver or normal.
+
 Development environment: MSYS2/MinGW under Windows, set up as described in build instructions (build.txt).
 
 Only open-source software used (aside from Windows).
